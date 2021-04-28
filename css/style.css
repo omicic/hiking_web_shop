@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&family=Open+Sans:wght@300;400&display=swap');
+
+:root {
+    --headings: 'Coda Caption', sans-serif;
+    --bodyFont: 'Open Sans', sans-serif;
+    --fontSize: 16px;
+    --transition: .3s ease;
+    --lightgray: #f6f6f6;
+    --white: #fff;
+    --black: #1e1e1e;
+    --primary: #3a8bcd;
+    --gray: #6c757d;
+    --text: #4a4a4a;
+    --borders: #eeeeee;
+}
+
+/*********************
+basic styles
+*********************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--bodyFont);
+    font-size: var(--fontSize);
+    letter-spacing: 1px;
+    line-height: 2rem;
+
+
+}
+
+button {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 15px 25px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+button:hover {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.clearfix {
+    display: block;
+    content: "";
+    clear: both;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--headings);
+    font-weight: 600;
+    color: var(--black);
+}
+
+hr {
+    width: 10%;
+    content: "";
+    height: 1px;
+    display: block;
+    background-color: var(--primary);
+    border: none;
+}
+
+/***header***/
+nav {
+    text-align: center;
+    padding-top: 30px;
+}
+
+nav a {
+    font-size: 3rem;
+    padding-bottom: 30px;
+    font-family: var(--headings);
+    color: var(--primary);
+    margin: 0 auto;
+}
+
+nav a i {
+    color: var(--black);
+}
+
+nav ul {
+    padding-top: 40px;
+    margin: 0 auto;
+}
+
+nav ul li {
+    display: inline;
+    padding-left: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    transition: var(--transition);
+}
+
+nav ul li:hover {
+    color: var(--primary);
+}
+
+
+.mainHead {
+    background-image: url(../img/header.jpg);
+    background-position: top;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+
+.mainHead article {
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    background: var(--white);
+    width: 40%;
+    padding: 50px;
+}
+
+.mainHead article h3 {
+    font-size: 1.7rem;
+    padding-bottom: 30px;
+}
+
+.mainHead article p {
+    font-size: 1rem;
+    padding: 30px 0;
+}
