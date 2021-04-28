@@ -49,13 +49,13 @@ button:hover {
     border: 1px solid var(--primary);
 }
 
-.clearfix {
+/* .clearfix {
     display: block;
     content: "";
     clear: both;
     padding: 20px;
     margin: 0 auto;
-}
+} */
 
 ul {
     list-style: none;
@@ -83,13 +83,17 @@ hr {
     border: none;
 }
 
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
 /***header***/
 nav {
     text-align: center;
     padding-top: 30px;
 }
 
-nav a {
+nav h1 a {
     font-size: 3rem;
     padding-bottom: 30px;
     font-family: var(--headings);
@@ -98,7 +102,7 @@ nav a {
 }
 
 nav a i {
-    color: var(--black);
+    color: var(--text);
 }
 
 nav ul {
@@ -108,7 +112,7 @@ nav ul {
 
 nav ul li {
     display: inline;
-    padding-left: 50px;
+    padding: 0 50px;
     text-transform: uppercase;
     text-align: center;
     font-weight: 400;
@@ -118,7 +122,6 @@ nav ul li {
 nav ul li:hover {
     color: var(--primary);
 }
-
 
 .mainHead {
     background-image: url(../img/header.jpg);
@@ -131,8 +134,9 @@ nav ul li:hover {
 .mainHead article {
     position: absolute;
     top: 200px;
-    left: 200px;
+    left: 200px; 
     background: var(--white);
+    opacity: .8;
     width: 40%;
     padding: 50px;
 }
@@ -150,7 +154,6 @@ nav ul li:hover {
 
 /***items***/
 .items {
-    height: 100vh;
     padding: 70px 200px;
 }
 .items h3 {
@@ -193,17 +196,48 @@ nav ul li:hover {
 .subscribe article form .name{
     background: transparent;
     border:1px solid var(--lightgray);
-    padding: 10px;  
+    padding: 15px;  
     color: var(--white);
 }
 .subscribe article form button {
     background: var(--lightgray);
+    font-size: 1rem;
     text-transform: none;
     border-radius: 5px;
     color: var(--black);
 }
 .subscribe article form button:hover{
     opacity: .8;
+}
+
+/***footer***/
+footer {
+    text-align: center;
+    padding-top: 100px;
+}
+
+footer a{
+    font-size: 2rem;   
+    padding-bottom: 30px;
+    font-family: var(--headings);
+    color: var(--primary);
+    margin: 0 auto;
+}
+
+footer div i{
+    font-size: 3rem;
+    color: var(--text);
+    margin: 0 20px;
+}
+
+footer div i:hover{
+    opacity: .8;
+}
+
+footer p{
+    padding: 200px 0 30px 0;
+    color: var(--text);
+    font-weight: 400;
 }
 
 
