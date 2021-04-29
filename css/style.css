@@ -28,8 +28,6 @@ body {
     font-size: var(--fontSize);
     letter-spacing: 1px;
     line-height: 2rem;
-
-
 }
 
 button {
@@ -49,13 +47,13 @@ button:hover {
     border: 1px solid var(--primary);
 }
 
-/* .clearfix {
+.clearfix {
     display: block;
     content: "";
     clear: both;
     padding: 20px;
     margin: 0 auto;
-} */
+} 
 
 ul {
     list-style: none;
@@ -74,23 +72,86 @@ h4 {
     color: var(--black);
 }
 
+h1 a{
+    transition: var(--transition);
+}
+
+h1 a:hover{
+    color: var(--text);
+}
+
 hr {
-    width: 30px;
+    width: 100%;
     content: "";
     height: 2px;
     display: block;
-    background-color: var(--primary);
+    background-color: var(--lightgray);
     border: none;
+    margin: 20px 0;
+}
+
+iframe{
+    width: 100%;
+   
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
+    width: 70%;
+    margin: auto;
+    padding: 80px 10px;  
 }
 
 .active{
     color: var(--primary);
 }
+
+.findus{
+    display: inline-block;
+    color: var(--text);
+}
+
+.findus i{
+   color: var(--primary);
+   margin: 0 10px;
+   transition: var(--transition);
+}
+.findus i:hover{
+    color: var(--text);
+    
+}
+
+form input[type="text"], form input[type="email"]{
+    width: 40%;
+    margin-bottom: 20px;
+    background: transparent;
+    border:1px solid var(--gray);
+    padding: 15px;  
+    color: var(--white);
+}
+form button {
+    background: var(--primary);
+    font-size: 1rem;
+    text-transform: none;
+    border-radius: 5px;
+    color: var(--black);
+}
+form button:hover{
+    opacity: .8;
+}
+
+h3 {
+    padding: 10px 0 30px 0;
+}
+
+h3::before{
+    display: block;
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: var(--primary);
+    margin-bottom: 10px;
+}
+
 /***header***/
 nav {
     text-align: center;
@@ -131,22 +192,28 @@ nav ul li a:hover {
     color: var(--primary);
 }
 
+/***mainHead***/
 .mainHead {
     background-image: url(../img/header.jpg);
-    background-position: top;
+    background-position: center top;
     background-size: cover;
-    position: relative;
-    height: 100vh;
+    padding: 200px 0;
+}
+
+.mainHead h3:after{
+    display: block;
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: var(--primary);
+    margin-top: 20px;
 }
 
 .mainHead article {
-    position: absolute;
-    top: 200px;
-    left: 200px; 
-    background: var(--white);
-    opacity: .8;
+    background: rgba(255,255,255,.7);
     width: 40%;
-    padding: 50px;
+    padding: 40px;
+    margin-left: 15%;
 }
 
 .mainHead article h3 {
@@ -161,22 +228,13 @@ nav ul li a:hover {
 
 
 /***items***/
-.items {
-    padding: 70px 200px;
-}
-.items h3 {
-    padding: 10px 0 30px 0;
-}
-
 .items .owl-carousel div{
     text-align: center;
 }
 
-
 .items .owl-carousel div h4{
     padding-top: 20px;
 }
-
 
 .items .owl-carousel div p{
     color: var(--primary);
@@ -200,23 +258,86 @@ nav ul li a:hover {
     color: var(--white);
     font-weight: 600;
 }
-
-.subscribe article form .name{
-    background: transparent;
-    border:1px solid var(--lightgray);
-    padding: 15px;  
-    color: var(--white);
-}
-.subscribe article form button {
+.subscribe button {
     background: var(--lightgray);
-    font-size: 1rem;
-    text-transform: none;
-    border-radius: 5px;
-    color: var(--black);
 }
-.subscribe article form button:hover{
-    opacity: .8;
+
+
+/***single***/
+.single article, .aboutus article{
+    display: inline-block;
 }
+
+article .slika{
+   float: left;
+   width: 35%;
+   border: 1px solid var(--primary);
+   border-radius: 10px;
+   padding-top: 20px;
+}
+
+article .opis{
+    float: right;
+    width: 55%;
+ }
+ article .slika img {
+     width: 100%;
+ }
+
+ article .tekst h2+p{
+    color: var(--primary);
+    padding-bottom: 15px;
+ }
+ article .tekst h2+p+p{
+    color: var(--text);
+    padding-bottom: 20px;
+ }
+
+ .single form select{
+     padding: 10px;
+     margin: 10px 20px 10px 0;
+ }
+
+ article .tekst p{
+     font-size: 1rem;
+     color: var(--text);
+ }
+
+ .single p a {
+     color: var(--primary);
+ }
+
+
+
+/***about***/
+.aboutus p{
+    color: var(--text);
+    line-height: 1.8rem;
+    font-weight: 600;
+}
+
+.aboutus article .slika{
+    border: none;
+ }
+/*********************
+contact
+*********************/
+.contact article .slika {
+    width: 48%;
+    border: none;
+    padding:0;
+}
+.contact article .opis{
+    width: 48%;
+}
+
+.contact form input,
+.contact textarea {
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
 
 /***footer***/
 footer {
@@ -250,7 +371,6 @@ footer ul li a{
 footer ul li a:hover{
     color: var(--primary);
 }
-}
 
 footer div i{
     font-size: 3rem;
@@ -267,6 +387,5 @@ footer p{
     color: var(--text);
     font-weight: 400;
 }
-
 
 
